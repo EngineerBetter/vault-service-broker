@@ -1,0 +1,28 @@
+catalog:
+  services: # catalog must advertise at least one service
+    - id: aa79e155-9811-4964-88e8-2f9fecf3362d
+      name: vault-service
+      description: Provides access to a Hashicorp Vault
+      bindable: true
+      tags:
+        - vault
+	- hashicorp
+      metadata:
+        displayName: Hashicorp Vault
+        imageUrl: https://www.hashicorp.com/images/v2/logos/vault-logo-2918f465.png
+        longDescription: The service provides a dedicated Hashicorp vault
+        providerDisplayName: GitHub
+        documentationUrl: https://github.com/danyoung/vault-service-broker
+        supportUrl: https://www.hashicorp.com/images/v2/logos/vault-logo-2918f465.png
+      plans: # a service has one or more plans
+        - id: 2d1d0451-9a06-4b7c-b556-dd83d03326aa
+          name: dedicated
+          description: Dedicated vault
+          metadata:
+            bullets:
+              - Vault is created as a new BOSH deployment
+            costs:
+              - amount:
+                  usd: 0.0
+                unit: MONTHLY
+            displayName: Dedicated
