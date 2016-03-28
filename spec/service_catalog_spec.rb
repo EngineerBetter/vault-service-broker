@@ -1,20 +1,17 @@
-require "broker_api"
+# spec/app_spec.rb
+require File.expand_path '../spec_helper.rb', __FILE__
 
-describe Service_catalog do
+describe "Vault Service Broker" do
 
-  describe "#get" do
+  describe "Get Catalog" do
 
-   context "if no message was passed" do
-    it "returns a default string" do
-      expect(Service_catalog.new.get(nil)).to eq "this is the default string"
+   context "if a name is passed" do
+    it "returns an ok" do
+      get '/name'
+      expect(last_response).to be_ok
     end
    end
 
-   context "if a message is passed" do
-    it "returns the message" do
-      expect(Service_catalog.new.get("foobar barfoo")).to eq "foobar barfoo"
-    end
 
-   end
   end
 end
