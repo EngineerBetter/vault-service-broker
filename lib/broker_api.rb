@@ -1,11 +1,7 @@
 class Service_catalog
 
-  def load_catalog
-    return "json"
-  end
-  
   def get
-   return "this is the catalog"
+   catalog_contents = YAML.load_file(ENV['SERVICE_CATALOG_FILE'])
   end
 
 end

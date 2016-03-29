@@ -34,11 +34,16 @@ describe "Vault Service Broker" do
        expect(last_response.status).to eq(200)
      end
 
-     it "returns json as the content type" do
+     it "returns JSON as the content type" do
        expect(last_response.header["Content-Type"]).to include("application/json")
      end
 
-   end
+     it "returns correct keys in JSON" do
+       response_json = JSON.parse last_response.body
+       response_json.keys.must_equal ["services"]
+     end
 
+     
+  end
  end
 end

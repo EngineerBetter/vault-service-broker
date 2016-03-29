@@ -1,10 +1,11 @@
 require 'rubygems'
 require 'bundler/setup'
+require 'dotenv'
+Dotenv.load
 require 'sinatra/base'
 require 'json'
 require 'yaml'
 require_relative 'lib/broker_api'
-
 
 
 class ServiceBrokerApp < Sinatra::Application

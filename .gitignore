@@ -10,6 +10,9 @@
 /test/version_tmp/
 /tmp/
 
+## Environment Variables
+/.env/
+
 ## Specific to RubyMotion:
 .dat*
 .repl_history
