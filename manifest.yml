@@ -1,0 +1,9 @@
+---
+applications:
+- name: cfvault
+  memory: 256M
+  instances: 1
+  host: cfvault
+  path: .
+  env:
+    AUTH_TOKEN: secret
