@@ -14,6 +14,7 @@ class ServiceBrokerApp < Sinatra::Application
   end
 
   get '/v2/catalog' do
+      content_type :json
       Service_catalog.new.get
   end
 

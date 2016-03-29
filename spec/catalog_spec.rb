@@ -25,11 +25,19 @@ describe "Vault Service Broker" do
    end
 
    context "if auth credentials are correct" do
-     it "returns a 200 unauthorized response" do
+     before do
        authorize "admin", "admin"
        catalog_request
+     end
+
+     it "returns a 200 unauthorized response" do
        expect(last_response.status).to eq(200)
      end
+
+     it "returns json as the content type" do
+       expect(last_response.header["Content-Type"]).to include("application/json")
+     end
+
    end
 
  end
