@@ -6,7 +6,7 @@ catalog:
       bindable: true
       tags:
         - vault
-	- hashicorp
+        - hashicorp
       metadata:
         displayName: Hashicorp Vault
         imageUrl: https://www.hashicorp.com/images/v2/logos/vault-logo-2918f465.png
