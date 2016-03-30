@@ -40,10 +40,12 @@ describe "Vault Service Broker" do
 
      it "returns correct keys in JSON" do
        response_json = JSON.parse last_response.body
-       response_json.keys.must_equal ["services"]
+       services = response_json["services"]
+       expect(services.keys.length).to eq(5)
+       #services.each do |service|
      end
 
-     
+
   end
  end
 end
