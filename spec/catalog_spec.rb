@@ -38,13 +38,12 @@ describe "Vault Service Broker" do
        expect(last_response.header["Content-Type"]).to include("application/json")
      end
 
-     it "returns correct keys in JSON" do
-       response_json = JSON.parse last_response.body
-       services = response_json["services"]
-       expect(services.keys.length).to eq(5)
-       #services.each do |service|
+     it "returns a service with a valid set of attributes, with at least one plan" do
+      response_json = JSON.parse last_response.body
+       service_0 = response_json['catalog']['services'][0]
+       expect(service_0.keys).to include("id", "name", "description", "bindable", "tags", "metadata", "plans")
+       expect(service_0['plans'][0].keys).to include("id", "name", "description")
      end
-
 
   end
  end

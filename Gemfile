@@ -1,9 +1,11 @@
 source 'https://rubygems.org'
 ruby "2.2.3"
 
-gem 'rake'
-gem 'sinatra'
-gem 'json'
+group :production do
+  gem 'rake'
+  gem 'sinatra'
+  gem 'json'
+end
 
 group :development do
   gem 'dotenv'
