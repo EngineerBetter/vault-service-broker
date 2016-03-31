@@ -16,8 +16,12 @@ class ServiceBrokerApp < Sinatra::Application
   end
 
   get '/v2/catalog' do
-      content_type :json
-      Service_catalog.new.get
+    content_type :json
+    ServiceCatalog.new.get
+  end
+
+  put "/v2/service_instances/:id" do
+    VaultService.new
   end
 
 end
