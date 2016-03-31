@@ -40,7 +40,7 @@ describe "Vault Service Broker" do
 
      it "returns a service with a valid set of attributes, with at least one plan" do
       response_json = JSON.parse last_response.body
-       service_0 = response_json['catalog']['services'][0]
+       service_0 = response_json['services'][0]
        expect(service_0.keys).to include("id", "name", "description", "bindable", "tags", "metadata", "plans")
        expect(service_0['plans'][0].keys).to include("id", "name", "description")
      end

@@ -6,4 +6,7 @@ applications:
   host: cfvault
   path: .
   env:
-    AUTH_TOKEN: secret
+    API_USER: admin
+    API_PASS: admin
+    PLATFORM: cf
+    SERVICE_CATALOG_FILE: "config/service_catalog.yml"
