@@ -1,1 +1,10 @@
-vault-service-broker
+# vault-service-broker
+
+## To test
+
+```
+SERVICE_CATALOG_FILE=config/service_catalog.yml \
+API_USER=admin \
+API_PASS=admin \
+bundle exec rake spec
+```
