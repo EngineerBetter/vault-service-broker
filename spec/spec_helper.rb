@@ -1,6 +1,5 @@
 require 'simplecov'
 SimpleCov.start
-require 'rspec'
 require 'rack/test'
 require_relative '../service_broker_app'
 
