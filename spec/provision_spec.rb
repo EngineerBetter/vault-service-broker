@@ -1,5 +1,4 @@
-describe "Provision Vault" do
-
+describe "Provisioning Vault" do
   before do
     @id = SecureRandom.uuid
   end
@@ -29,9 +28,14 @@ describe "Provision Vault" do
       provision_request
     end
 
-    it "returns a 202 accepted response" do
+    it "eventually says the instance is provisioned" do
       expect(last_response.status).to eq(202)
+      get "/v2/service_instances/#{@id}"
+      payload = JSON.parse(last_response.body)
+      expect(payload.fetch('state')).to eq('succeeded')
     end
+
+
    end
    
 end
