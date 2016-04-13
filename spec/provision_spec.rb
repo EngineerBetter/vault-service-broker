@@ -4,7 +4,7 @@ require File.expand_path '../spec_helper.rb', __FILE__
 describe "Provision Vault" do
 
   before do
-    @id = "1234-5678"
+    @id = SecureRandom.uuid
   end
 
   def provision_request
