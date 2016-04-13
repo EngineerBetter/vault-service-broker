@@ -28,7 +28,7 @@ describe "Get Catalog" do
       catalog_request
     end
 
-    it "returns a 200 unauthorized response" do
+    it "returns a 200 OK response" do
       expect(last_response.status).to eq(200)
     end
 
