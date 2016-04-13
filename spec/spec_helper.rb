@@ -15,8 +15,3 @@ end
 
 # For RSpec 2.x and 3.x
 RSpec.configure { |c| c.include RSpecMixin }
-
-
-requests = { "catalog" => "/v2/catalog",
-             "provision" => "/v2/service_instances/#{@id}"
-           }
