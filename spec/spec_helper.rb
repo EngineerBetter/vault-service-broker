@@ -4,8 +4,6 @@ require 'rspec'
 require 'rack/test'
 require_relative '../service_broker_app'
 
-ENV['RACK_ENV'] = 'test'
-
 module RSpecMixin
   include Rack::Test::Methods
   def app
