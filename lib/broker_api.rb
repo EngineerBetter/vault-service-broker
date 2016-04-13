@@ -9,7 +9,6 @@ end
 class VaultService
 
   def provision
-    puts "202"
   end
 
 end

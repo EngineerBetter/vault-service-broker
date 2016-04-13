@@ -21,7 +21,10 @@ class ServiceBrokerApp < Sinatra::Application
   end
 
   put "/v2/service_instances/:id" do
-    VaultService.new
+    VaultService.new.provision
+    status 202
+    puts "202"
+    "Accepted request"
   end
 
 end
